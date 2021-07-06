@@ -1,5 +1,6 @@
 package com.tutorials.eu.favdish.view.fragments
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
@@ -92,6 +93,24 @@ class AllDishesFragment : Fragment() {
         if(requireActivity() is MainActivity) {
             (activity as MainActivity)!!.showBottomNavigationView()
         }
+    }
+
+    fun deleteDish(dish: FavDish) {
+        val builder = AlertDialog.Builder(requireActivity())
+        builder.setTitle(resources.getString(R.string.title_delete_dish))
+        builder.setMessage(resources.getString(R.string.msg_detete_dish_dialog, dish.title))
+        builder.setIcon(android.R.drawable.ic_dialog_alert)
+        builder.setPositiveButton(resources.getString(R.string.lbl_yes)) { dialogInterface, _ ->
+            mFavDishViewModel.delete(dish)
+            dialogInterface.dismiss()
+        }
+        builder.setNegativeButton(resources.getString(R.string.lbl_no)) { dialogInterface, _ ->
+            dialogInterface.dismiss()
+        }
+
+        val alertDalog: AlertDialog = builder.create()
+        alertDalog.setCancelable(false)
+        alertDalog.show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

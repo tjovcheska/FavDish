@@ -1,8 +1,5 @@
 package com.tutorials.eu.favdish.utils
 
-/**
- * This is used to define the constant values that we can use throughout the application.
- */
 object Constants {
 
     const val DISH_TYPE: String = "DishType"
@@ -12,9 +9,8 @@ object Constants {
     const val DISH_IMAGE_SOURCE_LOCAL: String = "Local"
     const val DISH_IMAGE_SOURCE_ONLINE: String = "Online"
 
-    /**
-     * This function will return the Dish Type List items.
-     */
+    const val EXTRA_DISH_DETAILS: String = "DishDetails"
+
     fun dishTypes(): ArrayList<String> {
         val list = ArrayList<String>()
         list.add("breakfast")
@@ -28,9 +24,6 @@ object Constants {
         return list
     }
 
-    /**
-     *  This function will return the Dish Category list items.
-     */
     fun dishCategories(): ArrayList<String> {
         val list = ArrayList<String>()
         list.add("Pizza")
@@ -50,10 +43,6 @@ object Constants {
         return list
     }
 
-
-    /**
-     *  This function will return the Dish Cooking Time list items. The time added is in Minutes.
-     */
     fun dishCookTime(): ArrayList<String> {
         val list = ArrayList<String>()
         list.add("10")
