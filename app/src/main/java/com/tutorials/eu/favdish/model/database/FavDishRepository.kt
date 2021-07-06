@@ -26,5 +26,5 @@ class FavDishRepository(private val favDishDao: FavDishDao) {
         favDishDao.deleteFavDishDetails(favDish)
     }
 
-
+    fun filteredListDishes(value: String): Flow<List<FavDish>> = favDishDao.getFilteredDishesList(value)
 }
