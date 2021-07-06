@@ -44,4 +44,12 @@
     <string name="title_dish_details">Dish Details</string>
 
     <string name="lbl_estimate_cooking_time"></string>
+
+    <string name="msg_add_to_favorites">You have added the dish to your favorites.</string>
+    <string name="msg_removed_to_favorites">You have removed the dish from your favorites.</string>
+
+    <string name="label_no_favorite_dishes_addes_yet">No favorite dishes added yet!!!</string>
+
+    <string name="action_edit_dish">EDIT DISH</string>
+    <string name="action_delete_dish">DELETE DISH</string>
 </resources>
