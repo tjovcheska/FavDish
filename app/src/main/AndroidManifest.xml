@@ -3,12 +3,11 @@
     package="com.tutorials.eu.favdish">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!--For WRITE EXTERNAL STORAGE warning you can have a look at this article I hope it will clear your doubt.
-        https://www.raywenderlich.com/9577211-scoped-storage-in-android-10-getting-started -->
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <uses-feature android:name="android.hardware.camera"
         android:required="true" />
